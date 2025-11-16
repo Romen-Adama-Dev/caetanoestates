@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Header } from './components/header/header';
 
 interface Service {
   icon: string;
@@ -20,7 +21,7 @@ interface OwnerBenefit {
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule],
+  imports: [CommonModule, Header],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
