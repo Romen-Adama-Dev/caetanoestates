@@ -1,4 +1,3 @@
-<!-- src/app/app.html -->
 <div id="top"></div>
 <app-header [lang]="lang()" (langChange)="setLang($event)"></app-header>
 
@@ -80,41 +79,57 @@
           class="form-input"
           required
           [placeholder]="texts().formName"
+          name="name"
         />
         <input
           type="email"
           class="form-input"
           required
           [placeholder]="texts().formEmail"
+          name="email"
         />
       </div>
+
       <div class="form-row">
+        <select class="form-input" required name="phoneCountry">
+          <option value="" disabled selected>
+            {{ lang() === 'es' ? 'Prefijo' : 'Country code' }}
+          </option>
+          <option value="es">+34 · España</option>
+          <option value="us">+01 · United States</option>
+        </select>
         <input
           type="tel"
           class="form-input"
           required
+          name="phone"
           [placeholder]="texts().formPhone"
         />
-        <select class="form-input" required>
+      </div>
+
+      <div class="form-row">
+        <select class="form-input" required name="service">
           <option value="" disabled selected>
             {{ texts().formServicePlaceholder }}
           </option>
           <option value="management">
-            {{ lang() === 'es' ? 'Gestión de Propiedades' : 'Property Management' }}
+            {{ lang() === 'es' ? 'Gestión de propiedades' : 'Property management' }}
           </option>
           <option value="rental">
-            {{ lang() === 'es' ? 'Alquiler de Larga Estancia' : 'Long-Term Rentals' }}
+            {{ lang() === 'es' ? 'Alquiler de larga estancia' : 'Long-term rentals' }}
           </option>
           <option value="luxury">
-            {{ lang() === 'es' ? 'Servicios de Lujo' : 'Luxury Services' }}
+            {{ lang() === 'es' ? 'Servicios de lujo' : 'Luxury services' }}
           </option>
         </select>
       </div>
+
       <textarea
         class="form-textarea"
         rows="5"
         required
         [placeholder]="texts().formMessage"
+        name="message"
       ></textarea>
       <button type="submit" class="cta-button">
         {{ texts().contactButton }}
