@@ -1,10 +1,12 @@
+@use '../theme.scss' as theme;
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 50%, #f5f5f5 100%);
+  background: linear-gradient(135deg, #ffffff 0%, theme.$color-bg-page-mid 50%, #f5f5f5 100%);
   padding: 40px 20px;
   text-align: center;
   position: relative;
@@ -39,21 +41,21 @@
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 300;
   letter-spacing: 0.15em;
-  color: #2b1f0f;
+  color: theme.$color-text-main;
   margin-bottom: 20px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: theme.$font-family-main;
 }
 
 .logo-divider {
   width: 120px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #997c47, transparent);
+  background: linear-gradient(90deg, transparent, theme.$color-gold-deep, transparent);
   margin: 20px auto;
 }
 
 .tagline {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: #76787a;
+  color: theme.$color-text-muted;
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -61,7 +63,7 @@
 
 .hero-description {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: #45484a;
+  color: theme.$color-text-alt;
   line-height: 1.8;
   margin-bottom: 40px;
   max-width: 700px;
@@ -70,11 +72,11 @@
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #d4af72 0%, #997c47 100%);
+  background: linear-gradient(135deg, theme.$color-gold-main 0%, theme.$color-gold-deep 100%);
   color: white;
   border: none;
   padding: 16px 48px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: theme.$font-family-main;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -90,11 +92,11 @@
   
   &.secondary {
     background: transparent;
-    border: 2px solid #997c47;
-    color: #997c47;
+    border: 2px solid theme.$color-gold-deep;
+    color: theme.$color-gold-deep;
     
     &:hover {
-      background: linear-gradient(135deg, #d4af72 0%, #997c47 100%);
+      background: linear-gradient(135deg, theme.$color-gold-main 0%, theme.$color-gold-deep 100%);
       color: white;
     }
   }
@@ -114,7 +116,7 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 60px;
-  color: #2b1f0f;
+  color: theme.$color-text-main;
   letter-spacing: 0.05em;
   position: relative;
   
@@ -123,7 +125,7 @@
     display: block;
     width: 80px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #997c47, transparent);
+    background: linear-gradient(90deg, transparent, theme.$color-gold-deep, transparent);
     margin: 20px auto 0;
   }
 }
@@ -149,7 +151,7 @@
   
   &:hover {
     transform: translateY(-5px);
-    border-color: #e1e3e5;
+    border-color: theme.$color-border-soft;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
 }
@@ -164,13 +166,13 @@
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 15px;
-  color: #2b1f0f;
+  color: theme.$color-text-main;
   letter-spacing: 0.03em;
 }
 
 .service-description {
   font-size: 1.05rem;
-  color: #5d5f61;
+  color: theme.$color-text-soft;
   line-height: 1.7;
 }
 
@@ -197,7 +199,7 @@
 .differential-number {
   font-size: 3rem;
   font-weight: 300;
-  color: #d4af72;
+  color: theme.$color-gold-main;
   margin-bottom: 15px;
   letter-spacing: 0.05em;
 }
@@ -206,19 +208,23 @@
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 15px;
-  color: #2b1f0f;
+  color: theme.$color-text-main;
   letter-spacing: 0.03em;
 }
 
 .differential-description {
   font-size: 1.05rem;
-  color: #5d5f61;
+  color: theme.$color-text-soft;
   line-height: 1.7;
 }
 
 /* Owners Section */
 .owners-section {
-  background: linear-gradient(135deg, #2b1f0f 0%, #463419 100%);
+  background: linear-gradient(
+    135deg,
+    theme.$color-owners-bg-start 0%,
+    theme.$color-owners-bg-end 100%
+  );
   color: white;
 }
 
@@ -229,16 +235,16 @@
 }
 
 .owners-section .section-title {
-  color: #f2ca89;
+  color: theme.$color-owners-title;
   
   &::after {
-    background: linear-gradient(90deg, transparent, #f2ca89, transparent);
+    background: linear-gradient(90deg, transparent, theme.$color-owners-title, transparent);
   }
 }
 
 .owners-subtitle {
   font-size: 1.3rem;
-  color: #c5c7c9;
+  color: theme.$color-owners-text;
   margin-bottom: 50px;
   line-height: 1.6;
 }
@@ -261,8 +267,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #d4af72;
-  color: #2b1f0f;
+  background: theme.$color-gold-main;
+  color: theme.$color-text-main;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,13 +279,13 @@
 .benefit-text h4 {
   font-size: 1.3rem;
   margin-bottom: 8px;
-  color: #f2ca89;
+  color: theme.$color-owners-title;
   font-weight: 500;
 }
 
 .benefit-text p {
   font-size: 1rem;
-  color: #c5c7c9;
+  color: theme.$color-owners-text;
   line-height: 1.6;
 }
 
@@ -296,7 +302,7 @@
 .contact-subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #5d5f61;
+  color: theme.$color-text-soft;
   margin-bottom: 50px;
   font-style: italic;
 }
@@ -316,22 +322,22 @@
 .form-input,
 .form-textarea {
   padding: 16px 20px;
-  border: 1px solid #e1e3e5;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  border: 1px solid theme.$color-border-soft;
+  font-family: theme.$font-family-main;
   font-size: 16px;
-  color: #2b1f0f;
+  color: theme.$color-text-main;
   transition: all 0.3s ease;
   background: #fafafa;
   
   &:focus {
     outline: none;
-    border-color: #997c47;
+    border-color: theme.$color-gold-deep;
     background: white;
     box-shadow: 0 2px 10px rgba(153, 124, 71, 0.1);
   }
   
   &::placeholder {
-    color: #8f9294;
+    color: theme.$color-footer-muted;
   }
 }
 
@@ -342,10 +348,10 @@
 
 /* Footer */
 .footer {
-  background: #2b1f0f;
+  background: theme.$color-footer-bg;
   padding: 60px 20px 30px;
   text-align: center;
-  color: #c5c7c9;
+  color: theme.$color-owners-text;
 }
 
 .footer-content {
@@ -357,7 +363,7 @@
   font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: 0.15em;
-  color: #d4af72;
+  color: theme.$color-footer-accent;
   margin-bottom: 10px;
 }
 
@@ -365,14 +371,14 @@
   font-size: 1rem;
   font-style: italic;
   margin-bottom: 30px;
-  color: #8f9294;
+  color: theme.$color-footer-muted;
 }
 
 .footer-copyright {
   font-size: 0.9rem;
-  color: #76787a;
+  color: theme.$color-footer-text;
   padding-top: 20px;
-  border-top: 1px solid #45484a;
+  border-top: 1px solid theme.$color-footer-border;
   margin-top: 20px;
 }
 
