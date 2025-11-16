@@ -1,0 +1,57 @@
+@use '@angular/material' as mat;
+
+// Define custom luxury palette with old money gold and silver tones
+$caetano-gold: (
+  0: #000000,
+  10: #2b1f0f,
+  20: #463419,
+  25: #53401f,
+  30: #604c26,
+  35: #6e582c,
+  40: #7c6433,
+  50: #997c47,
+  60: #b6955c,
+  70: #d4af72,
+  80: #f2ca89,
+  90: #ffe5b3,
+  95: #fff3d9,
+  98: #fffbf5,
+  99: #fffcf9,
+  100: #ffffff,
+);
+
+$caetano-silver: (
+  0: #000000,
+  10: #1a1c1e,
+  20: #2f3133,
+  25: #3a3c3e,
+  30: #45484a,
+  35: #515355,
+  40: #5d5f61,
+  50: #76787a,
+  60: #8f9294,
+  70: #aaacae,
+  80: #c5c7c9,
+  90: #e1e3e5,
+  95: #f0f1f3,
+  98: #f9fafb,
+  99: #fcfdfe,
+  100: #ffffff,
+);
+
+html {
+  @include mat.theme((
+    color: (
+      primary: $caetano-gold,
+      tertiary: $caetano-silver,
+      theme-type: light,
+    ),
+    typography: (
+      plain-family: 'Cormorant Garamond, Georgia, serif',
+      brand-family: 'Cormorant Garamond, Georgia, serif',
+      bold-weight: 600,
+      regular-weight: 400,
+    ),
+    density: 0,
+  ));
+}
