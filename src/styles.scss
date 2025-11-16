@@ -1,4 +1,4 @@
-// Import custom theme first (SASS @use must come before any other rules)
+/* src/styles.scss */
 @use './theme.scss';
 
 // Import Google Fonts
@@ -27,6 +27,7 @@ body {
   );
   color: theme.$color-text-main;
   line-height: 1.6;
+  padding-top: 72px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -37,7 +38,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
 }
 
-// Luxury gold accent color
 .text-gold {
   color: theme.$color-gold-deep;
 }
@@ -46,7 +46,6 @@ h1, h2, h3, h4, h5, h6 {
   color: theme.$color-text-muted;
 }
 
-// Button styles
 .btn-luxury {
   background: linear-gradient(135deg, theme.$color-gold-main 0%, theme.$color-gold-deep 100%);
   color: white;
@@ -66,7 +65,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Section container
 .section {
   padding: 80px 20px;
   max-width: 1200px;
@@ -77,7 +75,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Animations
 @keyframes fadeInUp {
   from {
     opacity: 0;

@@ -1,22 +1,27 @@
+<!-- src/app/app.html -->
 <div id="top"></div>
-<app-header></app-header>
+<app-header [lang]="lang()" (langChange)="setLang($event)"></app-header>
 
 <section class="hero">
   <div class="hero-content">
     <div class="logo-container">
       <h1 class="logo">CAETANO ESTATES</h1>
       <div class="logo-divider"></div>
-      <p class="tagline">Premium Property Management & Luxury Living</p>
+      <p class="tagline">
+        {{ texts().heroTagline }}
+      </p>
     </div>
     <p class="hero-description">
-      Elevating the art of refined living through bespoke property management and exceptional long-term residence solutions.
+      {{ texts().heroDescription }}
     </p>
-    <button class="cta-button" (click)="scrollToContact()">Descubra Más</button>
+    <button class="cta-button" (click)="scrollToContact()">
+      {{ texts().heroButton }}
+    </button>
   </div>
 </section>
 
 <section class="section services-section" id="long-stay">
-  <h2 class="section-title">Nuestros Servicios</h2>
+  <h2 class="section-title">{{ texts().servicesTitle }}</h2>
   <div class="services-grid">
     <div class="service-card" *ngFor="let service of services()">
       <div class="service-icon">{{ service.icon }}</div>
@@ -28,12 +33,14 @@
 
 <section class="section differential-section" id="about">
   <div class="differential-content">
-    <h2 class="section-title">El Valor Caetano</h2>
+    <h2 class="section-title">{{ texts().differentialTitle }}</h2>
     <div class="differential-grid">
       <div class="differential-item" *ngFor="let value of differentialValues()">
         <div class="differential-number">{{ value.number }}</div>
         <h3 class="differential-title">{{ value.title }}</h3>
-        <p class="differential-description">{{ value.description }}</p>
+        <p class="differential-description">
+          {{ value.description }}
+        </p>
       </div>
     </div>
   </div>
@@ -41,9 +48,9 @@
 
 <section class="section owners-section" id="owners">
   <div class="owners-content">
-    <h2 class="section-title">Para Propietarios</h2>
+    <h2 class="section-title">{{ texts().ownersTitle }}</h2>
     <p class="owners-subtitle">
-      Convierta su propiedad en un activo de alto rendimiento con nuestra gestión exclusiva
+      {{ texts().ownersSubtitle }}
     </p>
     <div class="owners-benefits">
       <div class="benefit-item" *ngFor="let benefit of ownerBenefits()">
@@ -54,32 +61,64 @@
         </div>
       </div>
     </div>
-    <button class="cta-button secondary" (click)="scrollToContact()">Más Información</button>
+    <button class="cta-button secondary" (click)="scrollToContact()">
+      {{ texts().ownersButton }}
+    </button>
   </div>
 </section>
 
 <section class="section contact-section" id="contact">
   <div class="contact-content">
-    <h2 class="section-title">Contáctenos</h2>
+    <h2 class="section-title">{{ texts().contactTitle }}</h2>
     <p class="contact-subtitle">
-      Permítanos acompañarle en su búsqueda de la excelencia
+      {{ texts().contactSubtitle }}
     </p>
     <form class="contact-form" (submit)="onSubmit($event)">
       <div class="form-row">
-        <input type="text" placeholder="Nombre" class="form-input" required>
-        <input type="email" placeholder="Email" class="form-input" required>
+        <input
+          type="text"
+          class="form-input"
+          required
+          [placeholder]="texts().formName"
+        />
+        <input
+          type="email"
+          class="form-input"
+          required
+          [placeholder]="texts().formEmail"
+        />
       </div>
       <div class="form-row">
-        <input type="tel" placeholder="Teléfono" class="form-input" required>
+        <input
+          type="tel"
+          class="form-input"
+          required
+          [placeholder]="texts().formPhone"
+        />
         <select class="form-input" required>
-          <option value="" disabled selected>Servicio de Interés</option>
-          <option value="management">Gestión de Propiedades</option>
-          <option value="rental">Alquiler de Larga Estancia</option>
-          <option value="luxury">Servicios de Lujo</option>
+          <option value="" disabled selected>
+            {{ texts().formServicePlaceholder }}
+          </option>
+          <option value="management">
+            {{ lang() === 'es' ? 'Gestión de Propiedades' : 'Property Management' }}
+          </option>
+          <option value="rental">
+            {{ lang() === 'es' ? 'Alquiler de Larga Estancia' : 'Long-Term Rentals' }}
+          </option>
+          <option value="luxury">
+            {{ lang() === 'es' ? 'Servicios de Lujo' : 'Luxury Services' }}
+          </option>
         </select>
       </div>
-      <textarea placeholder="Mensaje" class="form-textarea" rows="5" required></textarea>
-      <button type="submit" class="cta-button">Enviar Solicitud</button>
+      <textarea
+        class="form-textarea"
+        rows="5"
+        required
+        [placeholder]="texts().formMessage"
+      ></textarea>
+      <button type="submit" class="cta-button">
+        {{ texts().contactButton }}
+      </button>
     </form>
   </div>
 </section>
@@ -87,7 +126,11 @@
 <footer class="footer">
   <div class="footer-content">
     <p class="footer-text">CAETANO ESTATES</p>
-    <p class="footer-tagline">Where Luxury Meets Excellence</p>
-    <p class="footer-copyright">© {{ currentYear() }} Caetano Estates. All rights reserved.</p>
+    <p class="footer-tagline">
+      {{ texts().footerTagline }}
+    </p>
+    <p class="footer-copyright">
+      © {{ currentYear() }} Caetano Estates. All rights reserved.
+    </p>
   </div>
 </footer>

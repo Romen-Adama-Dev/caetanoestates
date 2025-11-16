@@ -1,3 +1,4 @@
+<!-- src/app/components/header/header.html -->
 <header class="ce-header">
   <div class="ce-header__inner">
     <a href="#top" class="ce-header__brand">
@@ -5,13 +6,40 @@
       <span class="ce-header__brand-text">Caetano Estates</span>
     </a>
 
-    <nav class="ce-header__nav" aria-label="Navegación principal">
-      <a href="#owners" class="ce-header__link">Propietarios</a>
-      <a href="#long-stay" class="ce-header__link">Larga estancia</a>
-      <a href="#about" class="ce-header__link">Sobre nosotros</a>
-      <a href="#contact" class="ce-header__link ce-header__link--primary">
-        Contacto
-      </a>
-    </nav>
+    <div class="ce-header__right">
+      <nav class="ce-header__nav" aria-label="Navegación principal">
+        <a href="#owners" class="ce-header__link">
+          {{ lang === 'es' ? 'Propietarios' : 'Owners' }}
+        </a>
+        <a href="#long-stay" class="ce-header__link">
+          {{ lang === 'es' ? 'Larga estancia' : 'Long stay' }}
+        </a>
+        <a href="#about" class="ce-header__link">
+          {{ lang === 'es' ? 'Sobre nosotros' : 'About us' }}
+        </a>
+        <a href="#contact" class="ce-header__link ce-header__link--primary">
+          {{ lang === 'es' ? 'Contacto' : 'Contact' }}
+        </a>
+      </nav>
+
+      <div class="ce-header__lang" aria-label="Seleccionar idioma">
+        <button
+          type="button"
+          class="ce-header__lang-btn"
+          [class.ce-header__lang-btn--active]="lang === 'es'"
+          (click)="setLang('es')"
+        >
+          ES
+        </button>
+        <button
+          type="button"
+          class="ce-header__lang-btn"
+          [class.ce-header__lang-btn--active]="lang === 'en'"
+          (click)="setLang('en')"
+        >
+          EN
+        </button>
+      </div>
+    </div>
   </div>
 </header>

@@ -1,8 +1,11 @@
+/* src/app/components/header/header.scss */
 @use '../../../theme.scss' as theme;
 
 .ce-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 40;
   width: 100%;
   backdrop-filter: blur(18px);
@@ -46,6 +49,12 @@
   font-weight: 600;
 }
 
+.ce-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .ce-header__nav {
   display: flex;
   align-items: center;
@@ -75,13 +84,43 @@
   font-weight: 500;
 }
 
+.ce-header__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.ce-header__lang-btn {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-family: theme.$font-family-main;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  color: theme.$color-text-main;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ce-header__lang-btn:hover {
+  background: rgba(153, 124, 71, 0.06);
+}
+
+.ce-header__lang-btn--active {
+  border-color: theme.$color-gold-deep;
+  background: linear-gradient(135deg, theme.$color-gold-main 0%, theme.$color-gold-deep 100%);
+  color: white;
+}
+
 .ce-header__link:focus-visible,
-.ce-header__brand:focus-visible {
+.ce-header__brand:focus-visible,
+.ce-header__lang-btn:focus-visible {
   outline: 2px solid theme.$color-gold-main;
   outline-offset: 2px;
 }
 
-/* Mobile */
 @media (max-width: 640px) {
   .ce-header__inner {
     padding: 0.75rem 1rem;
@@ -98,5 +137,14 @@
   .ce-header__link {
     padding: 6px 14px;
     font-size: 0.85rem;
+  }
+
+  .ce-header__right {
+    gap: 0.5rem;
+  }
+
+  .ce-header__lang-btn {
+    padding: 3px 8px;
+    font-size: 0.75rem;
   }
 }
