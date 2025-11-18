@@ -1,7 +1,11 @@
 <header class="ce-header">
   <div class="ce-header__inner">
     <a href="#top" class="ce-header__brand">
-      <span class="ce-header__brand-mark">CE</span>
+      <img
+        src="./../../../assets/images/logo/logo-sinletras.png"
+        alt="Caetano Estates Logo"
+        class="ce-header__brand-img"
+      />
       <span class="ce-header__brand-text">Caetano Estates</span>
     </a>
 
@@ -27,7 +31,7 @@
             type="button"
             class="lang-trigger"
             (click)="toggleMenu()"
-            aria-haspopup="true"
+            aria-haspopup="listbox"
             [attr.aria-expanded]="isMenuOpen"
           >
             <span class="lang-flag">{{ currentLanguage.flag }}</span>
@@ -38,20 +42,18 @@
           <div
             class="lang-menu"
             *ngIf="isMenuOpen"
+            role="listbox"
           >
-            <select
-              class="lang-select"
-              aria-label="Language selector"
-              (change)="selectLang($any($event.target).value)"
+            <button
+              type="button"
+              class="lang-option"
+              *ngFor="let l of languages"
+              (click)="selectLang(l.code)"
+              [attr.aria-selected]="l.code === lang"
             >
-              <option
-                *ngFor="let l of languages"
-                [value]="l.code"
-                [selected]="l.code === lang"
-              >
-                {{ l.flag }} {{ l.label }}
-              </option>
-            </select>
+              <span class="lang-flag">{{ l.flag }}</span>
+              <span class="lang-code">{{ l.label }}</span>
+            </button>
           </div>
         </div>
       </div>
