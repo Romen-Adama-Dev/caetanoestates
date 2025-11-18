@@ -1,3 +1,4 @@
+// src/app/components/header/header.ts
 import { CommonModule } from '@angular/common'
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 
@@ -21,6 +22,7 @@ export class Header {
   @Output() langChange = new EventEmitter<Lang>()
 
   protected isMenuOpen = false
+  protected isNavOpen = false
 
   protected readonly languages: LanguageOption[] = [
     { code: 'es', label: 'ES', flag: '🇪🇸' },
@@ -45,5 +47,13 @@ export class Header {
 
     this.langChange.emit(lang)
     this.isMenuOpen = false
+  }
+
+  toggleNav(): void {
+    this.isNavOpen = !this.isNavOpen
+  }
+
+  closeNav(): void {
+    this.isNavOpen = false
   }
 }

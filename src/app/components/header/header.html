@@ -1,3 +1,4 @@
+<!-- src/app/components/header/header.html -->
 <header class="ce-header">
   <div class="ce-header__inner">
     <a href="#top" class="ce-header__brand">
@@ -12,7 +13,10 @@
     </a>
 
     <div class="ce-header__right">
-      <nav class="ce-header__nav" aria-label="Navegación principal">
+      <nav
+        class="ce-header__nav ce-header__nav--desktop"
+        aria-label="Navegación principal"
+      >
         <a href="#long-stay" class="ce-header__link">
           {{ lang === 'es' ? 'Larga estancia' : 'Long stay' }}
         </a>
@@ -27,38 +31,68 @@
         </a>
       </nav>
 
-      <div class="ce-header__right">
-        <div class="lang-switcher">
+      <div class="lang-switcher">
+        <button
+          type="button"
+          class="lang-trigger"
+          (click)="toggleMenu()"
+          aria-haspopup="listbox"
+          [attr.aria-expanded]="isMenuOpen"
+        >
+          <span class="lang-flag">{{ currentLanguage.flag }}</span>
+          <span class="lang-code">{{ currentLanguage.label }}</span>
+          <span class="lang-chevron">▾</span>
+        </button>
+
+        <div
+          class="lang-menu"
+          *ngIf="isMenuOpen"
+          role="listbox"
+        >
           <button
             type="button"
-            class="lang-trigger"
-            (click)="toggleMenu()"
-            aria-haspopup="listbox"
-            [attr.aria-expanded]="isMenuOpen"
+            class="lang-option"
+            *ngFor="let l of languages"
+            (click)="selectLang(l.code)"
+            [attr.aria-selected]="l.code === lang"
           >
-            <span class="lang-flag">{{ currentLanguage.flag }}</span>
-            <span class="lang-code">{{ currentLanguage.label }}</span>
-            <span class="lang-chevron">▾</span>
+            <span class="lang-flag">{{ l.flag }}</span>
+            <span class="lang-code">{{ l.label }}</span>
           </button>
-
-          <div
-            class="lang-menu"
-            *ngIf="isMenuOpen"
-            role="listbox"
-          >
-            <button
-              type="button"
-              class="lang-option"
-              *ngFor="let l of languages"
-              (click)="selectLang(l.code)"
-              [attr.aria-selected]="l.code === lang"
-            >
-              <span class="lang-flag">{{ l.flag }}</span>
-              <span class="lang-code">{{ l.label }}</span>
-            </button>
-          </div>
         </div>
       </div>
+
+      <button
+        type="button"
+        class="ce-header__burger"
+        (click)="toggleNav()"
+        [attr.aria-expanded]="isNavOpen"
+        aria-label="Abrir menú de navegación"
+      >
+        <span class="ce-header__burger-line"></span>
+        <span class="ce-header__burger-line"></span>
+      </button>
     </div>
+  </div>
+
+  <div class="ce-header__menu" *ngIf="isNavOpen">
+    <nav class="ce-header__nav ce-header__nav--mobile" aria-label="Navegación móvil">
+      <a href="#long-stay" class="ce-header__link" (click)="closeNav()">
+        {{ lang === 'es' ? 'Larga estancia' : 'Long stay' }}
+      </a>
+      <a href="#about" class="ce-header__link" (click)="closeNav()">
+        {{ lang === 'es' ? 'Sobre nosotros' : 'About us' }}
+      </a>
+      <a href="#owners" class="ce-header__link" (click)="closeNav()">
+        {{ lang === 'es' ? 'Propietarios' : 'Owners' }}
+      </a>
+      <a
+        href="#contact"
+        class="ce-header__link ce-header__link--primary"
+        (click)="closeNav()"
+      >
+        {{ lang === 'es' ? 'Contacto' : 'Contact' }}
+      </a>
+    </nav>
   </div>
 </header>
