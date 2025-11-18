@@ -27,7 +27,7 @@
             type="button"
             class="lang-trigger"
             (click)="toggleMenu()"
-            aria-haspopup="listbox"
+            aria-haspopup="true"
             [attr.aria-expanded]="isMenuOpen"
           >
             <span class="lang-flag">{{ currentLanguage.flag }}</span>
@@ -38,18 +38,20 @@
           <div
             class="lang-menu"
             *ngIf="isMenuOpen"
-            role="listbox"
           >
-            <button
-              type="button"
-              class="lang-option"
-              *ngFor="let l of languages"
-              (click)="selectLang(l.code)"
-              [attr.aria-selected]="l.code === lang"
+            <select
+              class="lang-select"
+              aria-label="Language selector"
+              (change)="selectLang($any($event.target).value)"
             >
-              <span class="lang-flag">{{ l.flag }}</span>
-              <span class="lang-code">{{ l.label }}</span>
-            </button>
+              <option
+                *ngFor="let l of languages"
+                [value]="l.code"
+                [selected]="l.code === lang"
+              >
+                {{ l.flag }} {{ l.label }}
+              </option>
+            </select>
           </div>
         </div>
       </div>
