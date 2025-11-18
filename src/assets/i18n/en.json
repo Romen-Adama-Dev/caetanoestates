@@ -1,0 +1,79 @@
+{
+  "heroTagline": "Premium Property Management & Luxury Living",
+  "heroDescription": "Elevating the art of refined living through bespoke property management and exceptional long-term residence solutions.",
+  "heroButton": "Discover more",
+  "servicesTitle": "Our services",
+  "differentialTitle": "The Caetano value",
+  "ownersTitle": "For owners",
+  "ownersSubtitle": "Turn your property into a high-performing asset with our exclusive and discreet management.",
+  "ownersButton": "More information",
+  "contactTitle": "Contact us",
+  "contactSubtitle": "Let us accompany you in your pursuit of excellence.",
+  "contactButton": "Send request",
+  "formName": "Name",
+  "formEmail": "Email",
+  "formPhone": "Phone",
+  "formServicePlaceholder": "Service of interest",
+  "formMessage": "Message",
+  "footerTagline": "Where luxury meets excellence",
+  "services": [
+    {
+      "icon": "🏛",
+      "title": "Property management",
+      "description": "Comprehensive administration of your real estate portfolio with exceptional standards of quality and attention to detail."
+    },
+    {
+      "icon": "🏡",
+      "title": "Long-term rentals",
+      "description": "Exclusive residences for extended stays, ensuring comfort, privacy and elegance at every moment."
+    },
+    {
+      "icon": "💎",
+      "title": "Luxury services",
+      "description": "Personalised experiences that transform your residence into a true sanctuary of sophistication and wellbeing."
+    }
+  ],
+  "differentialValues": [
+    {
+      "number": "01",
+      "title": "Discreet excellence",
+      "description": "Every detail considered with the meticulousness of those who truly understand what luxury means."
+    },
+    {
+      "number": "02",
+      "title": "Personalised attention",
+      "description": "A tailored service that anticipates your needs and takes care of your time, your investment and your peace of mind."
+    },
+    {
+      "number": "03",
+      "title": "Protected heritage",
+      "description": "Your real estate investment in the most trusted hands of the premium market."
+    }
+  ],
+  "ownerBenefits": [
+    {
+      "title": "Full day-to-day management",
+      "description": "We handle tenant relations, payments, issues and service coordination, with either a monthly fee or commission model to suit your needs."
+    },
+    {
+      "title": "Weekly Peace of Mind",
+      "description": "Regular inspections of the property, updated photos and a direct WhatsApp report so you always know how your home is doing."
+    },
+    {
+      "title": "Automation and reporting",
+      "description": "Optimised workflows (check-in, cleaning, notifications, reminders) and clear reports so you can review results without wasting time."
+    },
+    {
+      "title": "Screened international tenants",
+      "description": "Carefully filtered and solvent profiles, with a special focus on long-stay international tenants who treat the property as their own."
+    },
+    {
+      "title": "Luxury services for your property",
+      "description": "Premium cleaning, utilities monitoring and coordinated maintenance to ensure your property always maintains an exceptional level of quality."
+    },
+    {
+      "title": "Transparency and full control",
+      "description": "You decide how involved you want to be: we manage the details, you keep full visibility and the final say over your asset."
+    }
+  ]
+}

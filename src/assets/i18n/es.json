@@ -1,0 +1,79 @@
+{
+  "heroTagline": "Gestión premium de propiedades y estilo de vida",
+  "heroDescription": "Elevamos el concepto de vivir bien con una gestión a medida de su patrimonio y residencias de larga duración con auténtico sello boutique.",
+  "heroButton": "Descubrir más",
+  "servicesTitle": "Nuestros servicios",
+  "differentialTitle": "El valor Caetano",
+  "ownersTitle": "Para propietarios",
+  "ownersSubtitle": "Transforme su vivienda en un activo de alto rendimiento con una gestión discreta, segura y exquisitamente cuidada.",
+  "ownersButton": "Más información",
+  "contactTitle": "Contáctenos",
+  "contactSubtitle": "Permítanos acompañarle en la búsqueda de la mejor versión de su propiedad.",
+  "contactButton": "Enviar solicitud",
+  "formName": "Nombre",
+  "formEmail": "Correo electrónico",
+  "formPhone": "Teléfono",
+  "formServicePlaceholder": "Servicio de interés",
+  "formMessage": "Mensaje",
+  "footerTagline": "Donde el lujo se encuentra con la excelencia",
+  "services": [
+    {
+      "icon": "🏛",
+      "title": "Gestión de propiedades",
+      "description": "Administración integral de su patrimonio inmobiliario con estándares excepcionales de calidad y atención al detalle."
+    },
+    {
+      "icon": "🏡",
+      "title": "Alquiler de larga estancia",
+      "description": "Residencias seleccionadas para estancias prolongadas, garantizando confort, privacidad y elegancia en el día a día."
+    },
+    {
+      "icon": "💎",
+      "title": "Servicios de lujo",
+      "description": "Experiencias personalizadas que convierten cada vivienda en un refugio de sofisticación y bienestar."
+    }
+  ],
+  "differentialValues": [
+    {
+      "number": "01",
+      "title": "Excelencia discreta",
+      "description": "Cada decisión y cada detalle se cuidan con la meticulosidad de quien entiende el verdadero significado del lujo."
+    },
+    {
+      "number": "02",
+      "title": "Atención personalizada",
+      "description": "Un servicio a medida que se adelanta a sus necesidades y cuida de su tiempo, su inversión y su tranquilidad."
+    },
+    {
+      "number": "03",
+      "title": "Patrimonio protegido",
+      "description": "Su inversión inmobiliaria en manos de un partner de confianza especializado en el segmento premium."
+    }
+  ],
+  "ownerBenefits": [
+    {
+      "title": "Gestión integral del día a día",
+      "description": "Nos encargamos de la relación con el inquilino, cobros, incidencias y coordinación de servicios, con modelo de cuota o comisión según su preferencia."
+    },
+    {
+      "title": "Peace of Mind semanal",
+      "description": "Supervisión periódica de la vivienda, fotos actualizadas y reporte directo por WhatsApp para que sepa en todo momento cómo está su propiedad."
+    },
+    {
+      "title": "Automatización y reportes",
+      "description": "Procesos optimizados (check-in, limpieza, avisos, recordatorios) y reportes claros para que pueda revisar resultados sin perder tiempo."
+    },
+    {
+      "title": "Inquilinos internacionales filtrados",
+      "description": "Perfiles solventes y verificados, con especial foco en inquilinos extranjeros de larga estancia que cuiden la vivienda como propia."
+    },
+    {
+      "title": "Servicios de lujo para su propiedad",
+      "description": "Limpieza premium, control de consumos y mantenimiento coordinado para asegurar que la vivienda mantenga siempre un nivel impecable."
+    },
+    {
+      "title": "Transparencia y control total",
+      "description": "Usted decide el nivel de implicación: nosotros gestionamos, usted conserva la última palabra y visibilidad completa sobre su activo."
+    }
+  ]
+}

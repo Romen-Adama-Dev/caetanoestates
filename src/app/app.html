@@ -93,9 +93,19 @@
       <div class="form-row">
         <select class="form-input" required name="phoneCountry">
           <option value="" disabled selected>
-            {{ lang() === 'es' ? 'Prefijo' : 'Country code' }}
+            {{
+              lang() === 'es'
+                ? 'Prefijo'
+                : lang() === 'de'
+                ? 'Vorwahl'
+                : lang() === 'fr'
+                ? 'Indicatif'
+                : 'Country code'
+            }}
           </option>
           <option value="es">+34 · España</option>
+          <option value="de">+49 · Deutschland</option>
+          <option value="fr">+33 · France</option>
           <option value="us">+01 · United States</option>
         </select>
         <input
