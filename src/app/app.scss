@@ -370,6 +370,26 @@
   margin-top: 16px;
 }
 
+.hero .tagline,
+.hero .hero-description,
+.section-title,
+.service-description,
+.owners-subtitle,
+.benefit-item p {
+  color: #111111;
+}
+
+.cta-button,
+.cta-button.secondary {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Por si algún texto dorado quedaba sobre fondo claro */
+.text-gold-on-light {
+  color: #8b6b35;
+}
+
 /* Responsive Design - Mobile First */
 @media (max-width: 768px) {
   .hero {

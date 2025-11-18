@@ -246,6 +246,32 @@
   );
 }
 
+/* src/app/components/header/header.scss */
+.ce-header__brand-picture {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+}
+
+/* contraste más alto en secciones clave */
+.hero .tagline,
+.hero .hero-description,
+.section-title,
+.service-title,
+.service-description,
+.owners-subtitle,
+.benefit-item h4,
+.benefit-item p {
+  color: #111111;
+}
+
+/* footer legible */
+.footer-text,
+.footer-tagline,
+.footer p {
+  color: #111111;
+}
+
 /* Mobile */
 @media (max-width: 640px) {
   .ce-header__inner {
