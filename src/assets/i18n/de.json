@@ -1,0 +1,79 @@
+{
+  "heroTagline": "Exklusive Verwaltung von Immobilien und Lebensstil",
+  "heroDescription": "Wir heben die Kunst des guten Wohnens mit maßgeschneiderter Verwaltung Ihres Immobilienvermögens und hochwertiger Langzeitresidenzen auf ein neues Niveau.",
+  "heroButton": "Mehr erfahren",
+  "servicesTitle": "Unsere Services",
+  "differentialTitle": "Der Caetano Mehrwert",
+  "ownersTitle": "Für Eigentümer",
+  "ownersSubtitle": "Verwandeln Sie Ihre Immobilie in ein renditestarkes Asset mit diskretem, sicherem und sorgfältig betreutem Management.",
+  "ownersButton": "Mehr Informationen",
+  "contactTitle": "Kontakt",
+  "contactSubtitle": "Lassen Sie uns Sie auf dem Weg zur besten Version Ihrer Immobilie begleiten.",
+  "contactButton": "Anfrage senden",
+  "formName": "Name",
+  "formEmail": "E-Mail",
+  "formPhone": "Telefon",
+  "formServicePlaceholder": "Gewünschter Service",
+  "formMessage": "Nachricht",
+  "footerTagline": "Wo Luxus auf Exzellenz trifft",
+  "services": [
+    {
+      "icon": "🏛",
+      "title": "Immobilienverwaltung",
+      "description": "Umfassende Verwaltung Ihres Immobilienportfolios mit höchsten Qualitätsstandards und Liebe zum Detail."
+    },
+    {
+      "icon": "🏡",
+      "title": "Langzeitvermietung",
+      "description": "Sorgfältig ausgewählte Residenzen für längere Aufenthalte mit Komfort, Privatsphäre und Eleganz im Alltag."
+    },
+    {
+      "icon": "💎",
+      "title": "Luxusservices",
+      "description": "Personalisierte Erlebnisse, die jede Immobilie in einen Ort echter Raffinesse und Wohlbefindens verwandeln."
+    }
+  ],
+  "differentialValues": [
+    {
+      "number": "01",
+      "title": "Diskrete Exzellenz",
+      "description": "Jede Entscheidung und jedes Detail werden mit der Sorgfalt behandelt, die echtes Luxusverständnis auszeichnet."
+    },
+    {
+      "number": "02",
+      "title": "Persönliche Betreuung",
+      "description": "Ein maßgeschneiderter Service, der Ihre Bedürfnisse antizipiert und Ihre Zeit, Ihr Investment und Ihre Ruhe schützt."
+    },
+    {
+      "number": "03",
+      "title": "Geschütztes Vermögen",
+      "description": "Ihr Immobilieninvestment in den Händen eines vertrauenswürdigen Partners, spezialisiert auf das Premiumsegment."
+    }
+  ],
+  "ownerBenefits": [
+    {
+      "title": "Ganzheitliches Tagesgeschäft",
+      "description": "Wir kümmern uns um Mieterkommunikation, Zahlungen, Anliegen und Dienstleisterkoordination – als Pauschale oder auf Provisionsbasis."
+    },
+    {
+      "title": "Wöchentliches Peace of Mind",
+      "description": "Regelmäßige Objektkontrolle, aktuelle Fotos und ein direkter WhatsApp-Report, damit Sie jederzeit den Überblick behalten."
+    },
+    {
+      "title": "Automatisierung und Reporting",
+      "description": "Optimierte Abläufe (Check-in, Reinigung, Benachrichtigungen, Erinnerungen) und klare Auswertungen, damit Sie Ergebnisse schnell erfassen können."
+    },
+    {
+      "title": "Gefilterte internationale Mieter",
+      "description": "Sorgfältig geprüfte, solvente Profile mit Fokus auf internationale Langzeitmieter, die Ihre Immobilie wie ihr eigenes Zuhause behandeln."
+    },
+    {
+      "title": "Luxusservices für Ihre Immobilie",
+      "description": "Premium-Reinigung, Verbrauchskontrolle und koordinierte Wartung, damit Ihr Objekt stets auf höchstem Niveau bleibt."
+    },
+    {
+      "title": "Transparenz und volle Kontrolle",
+      "description": "Sie bestimmen den Grad Ihrer Einbindung: Wir managen die Details, Sie behalten volle Sichtbarkeit und das letzte Wort."
+    }
+  ]
+}

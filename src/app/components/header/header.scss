@@ -35,18 +35,11 @@
   text-transform: uppercase;
 }
 
-.ce-header__brand-mark {
-  width: 32px;
-  height: 32px;
+.ce-header__brand-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
   border-radius: 50%;
-  border: 1px solid rgba(153, 124, 71, 0.45);
-  background: linear-gradient(135deg, theme.$color-gold-main 0%, theme.$color-gold-deep 100%);
-  color: #1b1b1b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 600;
 }
 
 .ce-header__right {
@@ -85,44 +78,149 @@
   font-weight: 500;
 }
 
-.ce-header__lang {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.ce-header__lang-btn {
-  border-radius: 999px;
-  border: 1px solid transparent;
-  padding: 3px 8px;
-  font-size: 0.75rem;
-  font-family: theme.$font-family-main;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: transparent;
-  color: theme.$color-text-main;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.ce-header__lang-btn:hover {
-  background: rgba(153, 124, 71, 0.06);
-}
-
-.ce-header__lang-btn--active {
-  border-color: theme.$color-gold-deep;
-  background: linear-gradient(135deg, theme.$color-gold-main 0%, theme.$color-gold-deep 100%);
-  color: white;
-}
-
 .ce-header__link:focus-visible,
-.ce-header__brand:focus-visible,
-.ce-header__lang-btn:focus-visible {
+.ce-header__brand:focus-visible {
   outline: 2px solid theme.$color-gold-main;
   outline-offset: 2px;
 }
 
+/* Burger */
+
+.ce-header__burger {
+  display: none;
+  width: 36px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(153, 124, 71, 0.4);
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 0 6px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.ce-header__burger-line {
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f5e6c4, #b58a4a);
+}
+
+/* Menú móvil (dropdown bajo el header, sin ocultarlo) */
+
+.ce-header__menu {
+  position: fixed;
+  top: 56px;
+  right: 0;
+  left: 0;
+  z-index: 39;
+  padding: 0.5rem 1.25rem 0.85rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(153, 124, 71, 0.25);
+  backdrop-filter: blur(14px);
+}
+
+.ce-header__nav--mobile {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.ce-header__nav--mobile .ce-header__link {
+  width: 100%;
+  text-align: left;
+}
+
+/* Selector de idioma */
+
+.lang-switcher {
+  position: relative;
+}
+
+.lang-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.75rem;
+  min-height: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(153, 124, 71, 0.45);
+  background: radial-gradient(circle at 30% 0%, theme.$color-gold-main, theme.$color-gold-deep 65%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45), 0 10px 26px rgba(0, 0, 0, 0.5);
+  color: #1b1b1b;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lang-trigger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.55), 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.lang-flag {
+  font-size: 0.65rem;
+}
+
+.lang-code {
+  font-weight: 500;
+  font-size: 0.65rem;
+}
+
+.lang-chevron {
+  font-size: 0.5rem;
+  opacity: 0.85;
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  margin-top: 0.35rem;
+  min-width: 150px;
+  padding: 0.35rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.572);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(153, 124, 71, 0.3);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+}
+
+.lang-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: theme.$color-text-main;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.lang-option:hover {
+  background: rgba(243, 243, 243, 0.12);
+  transform: translateY(-0.5px);
+}
+
+.lang-option[aria-selected='true'] {
+  background: linear-gradient(
+    135deg,
+    rgba(181, 138, 74, 0.948),
+    rgba(181, 138, 74, 0.579)
+  );
+}
+
 /* Mobile */
+
 @media (max-width: 640px) {
   .ce-header__inner {
     padding: 0.7rem 1rem;
@@ -132,16 +230,11 @@
     font-size: 1.05rem;
   }
 
-  .ce-header__nav {
-    gap: 0.35rem;
+  .ce-header__nav--desktop {
+    display: none;
   }
 
-  .ce-header__link {
-    padding: 4px 10px;
-    font-size: 0.8rem;
-  }
-
-  .ce-header__right {
-    gap: 0.5rem;
+  .ce-header__burger {
+    display: inline-flex;
   }
 }
